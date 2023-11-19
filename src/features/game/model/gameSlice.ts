@@ -25,8 +25,8 @@ export const gameSlice = createSlice({
   name: 'game',
   initialState,
   reducers: {
-    start: (state) => {
-      return (state = { ...initialState, gameStatus: 'started' });
+    start: (_state) => {
+      return (_state = { ...initialState, gameStatus: 'started' });
     },
 
     won: (state) => {
