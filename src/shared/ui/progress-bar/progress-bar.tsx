@@ -1,14 +1,5 @@
-export const ProgressBar = (props: { progress: number; isPlayersTurn: boolean }) => {
-  return (
-    <div>
-      <div
-        style={{
-          width: `${props.progress}%`,
-          height: '3px',
-          backgroundColor: props.isPlayersTurn ? '#C4B5FD ' : '#DCDCDC',
-          transition: props.progress !== 100 ? 'width 2s linear' : 'none',
-        }}
-      />
-    </div>
-  );
+import styles from './progress-bar.module.css';
+
+export const ProgressBar = (props: { isPlayersTurn: boolean }) => {
+  return <div className={props.isPlayersTurn ? styles.progress : styles['progress-2']} />;
 };

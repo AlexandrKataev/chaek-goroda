@@ -1,0 +1,37 @@
+.progress {
+  width: 100%;
+  animation: start-progress 120s linear;
+  background-color: #c4b5fd;
+  height: 3px;
+}
+
+.progress-2 {
+  width: 100%;
+  animation: start-progress-2 120s linear;
+  background-color: #dcdcdc;
+  height: 3px;
+}
+
+@keyframes start-progress {
+  from {
+    width: 100%;
+  }
+  50% {
+    width: 50%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes start-progress-2 {
+  from {
+    width: 100%;
+  }
+  50% {
+    width: 50%;
+  }
+  to {
+    width: 0%;
+  }
+}

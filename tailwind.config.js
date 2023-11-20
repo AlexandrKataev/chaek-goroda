@@ -6,5 +6,5 @@ export default {
     fontFamily: { sans: ['Helvetica Neue', 'sans-serif'] },
     extend: {},
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('tailwind-scrollbar')],
 };

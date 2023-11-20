@@ -16,7 +16,9 @@ export const useTimer = () => {
 
     const interval = setInterval(() => {
       dur = dayjs.duration(dur.asMilliseconds() - 1000, 'milliseconds');
-      let timestamp = `${dur.minutes()}:${dur.seconds()}`;
+      let timestamp = `${dur.minutes()}:${
+        dur.seconds() < 10 ? '0' + dur.seconds() : dur.seconds()
+      }`;
       setTime(timestamp);
     }, 1000);
     return () => clearInterval(interval);

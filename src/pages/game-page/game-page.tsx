@@ -51,7 +51,7 @@ export const GamePage = () => {
       dispatch(sendCity(formattedName));
       setInputValue('');
       setTime('2:00');
-      setProgress(100);
+      setProgress(120);
       setEndTime(dayjs().add(2, 'minutes'));
     }
   };
@@ -68,7 +68,9 @@ export const GamePage = () => {
         console.log('ход ии');
         const res = findCityByLetter(getLastLetter(lastNamedCity), notNamedCities);
         res !== 'won' ? dispatch(sendCity(res)) : dispatch(won());
-        setProgress(100);
+        setEndTime(dayjs().add(2, 'minutes'));
+        setProgress(120);
+        setTime('2:00');
       }
     }, 5000);
 
@@ -81,7 +83,7 @@ export const GamePage = () => {
   }, [namedCities]);
 
   useEffect(() => {
-    if (time === '1:30') {
+    if (time === '0:00') {
       dispatch(losed());
     }
   }, [time]);
@@ -95,9 +97,8 @@ export const GamePage = () => {
         <div>Сейчас ваша очередь</div>
         <div className="text-xl font-medium">{time}</div>
       </header>
-
-      <main className="h-[320px] w-full overflow-y-scroll snap-end ">
-        <ProgressBar progress={progress} isPlayersTurn={isPlayersTurn} />
+      <ProgressBar progress={progress} isPlayersTurn={isPlayersTurn} />
+      <main className="h-[320px] mt-3 w-full overflow-y-scroll snap-end scrollbar-thumb-violet-600 scrollbar-track-white scrollbar-thin">
         {!lastNamedCity && (
           <div className="p-4  mt-[150px] text-gray-400 flex flex-col justify-center items-center">
             <div>Первый участник вспоминает города...</div>
