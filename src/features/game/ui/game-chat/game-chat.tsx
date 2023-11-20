@@ -38,10 +38,7 @@ export const GameChat = () => {
     if (inputValue === '') {
       return;
     }
-    if (lastNamedCity && inputValue[0].toLowerCase() !== getLastLetter(lastNamedCity)) {
-      alert('Город не найден');
-      return;
-    }
+
     if (namedCities.filter((el) => el.toLowerCase() === inputValue.toLowerCase()).length) {
       alert('Город уже был');
       return;
