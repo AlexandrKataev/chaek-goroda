@@ -18,7 +18,7 @@ export const FinalPage = () => {
   };
 
   return (
-    <div className="w-[576px] text-center flex flex-col gap-6 p-10">
+    <div className="w-full text-center flex flex-col gap-6 p-10">
       <div className="text-xl">
         {isPlayersTurn ? (
           <>

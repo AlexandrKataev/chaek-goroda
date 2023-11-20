@@ -7,7 +7,7 @@ function App() {
   const gameStatus = useAppSelector(selectGameStatus);
   return (
     <div className="bg-blue-50 w-full h-screen flex flex-col justify-center items-center ">
-      <div className="max-w-xl  bg-white rounded-2xl">
+      <div className="w-full sm:w-[576px] bg-white rounded-2xl">
         {!gameStatus && <StartPage />}
         {gameStatus === 'started' && <GamePage />}
         {(gameStatus === 'losed' || gameStatus === 'won') && <FinalPage />}

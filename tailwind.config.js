@@ -6,5 +6,5 @@ export default {
     fontFamily: { sans: ['Helvetica Neue', 'sans-serif'] },
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };

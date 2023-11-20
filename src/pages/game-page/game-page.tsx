@@ -90,16 +90,16 @@ export const GamePage = () => {
     setInputValue(e.currentTarget.value);
   };
   return (
-    <div className="w-[576px]">
-      <header className="p-4 text-base font-normal flex justify-between items-center ">
+    <div className="w-full break-words">
+      <header className="  p-4 text-base font-normal flex justify-between items-center ">
         <div>Сейчас ваша очередь</div>
         <div className="text-xl font-medium">{time}</div>
       </header>
 
-      <main className="h-[320px] overflow-y-scroll snap-end">
+      <main className="h-[320px] w-full overflow-y-scroll snap-end ">
         <ProgressBar progress={progress} isPlayersTurn={isPlayersTurn} />
         {!lastNamedCity && (
-          <div className="mt-[150px] text-gray-400 flex flex-col justify-center items-center">
+          <div className="p-4  mt-[150px] text-gray-400 flex flex-col justify-center items-center">
             <div>Первый участник вспоминает города...</div>
           </div>
         )}
