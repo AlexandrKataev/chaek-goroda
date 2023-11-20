@@ -1,7 +1,7 @@
 import { useAppDispatch } from '@app/redux/hooks';
 import { start } from '@features/game';
 
-export const StartPage = () => {
+export const HomePage = () => {
   const dispatch = useAppDispatch();
   const onClickStart = () => {
     dispatch(start());
